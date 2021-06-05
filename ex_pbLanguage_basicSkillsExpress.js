@@ -9,7 +9,8 @@ app.set('views','./express_views');
 app.get('/', (req, res) => {
 	res.render('index',
 		{
-			answer001: findCertainCities('Bordeaux')
+			answer_001: findCertainCities('Bordeaux'),
+			answer_002: isDivisible(200)  
 		}
 	);
 });

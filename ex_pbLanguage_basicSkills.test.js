@@ -1,4 +1,4 @@
-const { findCertainCities, isDivisible } = require('./ex_pbLanguage_basicSkills');
+const { findCertainCities, isDivisible, getMissingAngle } = require('./ex_pbLanguage_basicSkills');
 
 test('findCertainCities() is correctly implemented', () => {
     expect(findCertainCities('Berlin')).toBe('not found');
@@ -24,4 +24,12 @@ test('isDivisible() is correctly implemented', () => {
     expect(isDivisible(200)).toBe(true);
     expect(isDivisible(162)).toBe(false);
     expect(isDivisible(333.4234)).toBe(false);
+});
+
+
+test('getMissingAngle() is correctly implemented', () => {
+	expect(getMissingAngle(80, 80)).toBe('acute');
+	expect(getMissingAngle(160, 10)).toBe('acute');
+	expect(getMissingAngle(20, 10)).toBe('obtuse');
+	expect(getMissingAngle(45, 45)).toBe('right angle');
 });
