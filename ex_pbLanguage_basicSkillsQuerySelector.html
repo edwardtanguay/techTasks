@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+	<meta name="viewport"
+		  content="width=device-width, initial-scale=1.0">
+	<title>Output with querySelector()</title>
+</head>
+
+<body>
+	<h2>Output with querySelector():</h2>
+	<ul>
+		<li id="answer_001"></li>
+		<li id="answer_002"></li>
+	</ul>
+	<script src="ex_pbLanguage_basicSkills.js"></script>
+	<script>
+		document.querySelector('#answer_001').textContent = findCertainCities('Bordeaux');
+		document.querySelector('#answer_002').textContent = isDivisible(200); 
+	</script>
+</body>
+
+</html>

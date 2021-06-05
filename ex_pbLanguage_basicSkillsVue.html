@@ -1,27 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible"
-		  content="IE=edge">
-	<meta name="viewport"
-		  content="width=device-width, initial-scale=1.0">
 	<script src="https://unpkg.com/vue@next"></script>
-	<title>Vue 3.0</title>
+	<title>Output with Vue 3.0</title>
 </head>
 
 <body>
 	<div id="app">
-		<h2>Output:</h2>
-		<div>{{answer}}</div>
+		<h2>Output with Vue 3.0:</h2>
+		<ul>
+			<li>{{answer_001}}</li>
+			<li>{{answer_002}}</li>
+		</ul>
 	</div>
 	<script src="ex_pbLanguage_basicSkills.js"></script>
 	<script>
 		const App = {
 			data() {
 				return {
-					answer: findCertainCities('Bordeaux')
+					answer_001: findCertainCities('Bordeaux'),
+					answer_002: isDivisible(200)
 				};
 			}
 		};

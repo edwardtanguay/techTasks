@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 
 <head>
-	<meta name="viewport"
-		  content="width=device-width, initial-scale=1.0">
-		  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<title>HTML View</title>
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<title>Output with jQuery</title>
 </head>
 
 <body>
-	<h2>Output:</h2>
-	<div id="answer"></div>
+	<h2>Output with jQuery:</h2>
+	<ul>
+		<li><span id="answer_001"></span></li>
+		<li><span id="answer_002"></span></li>
+	</ul>
 	<script src="ex_pbLanguage_basicSkills.js"></script>
 	<script>
-		$('#answer').text(findCertainCities('Bordeaux'));
+		$('#answer_001').text(findCertainCities('Bordeaux'));
+		$('#answer_002').text(isDivisible(200));
 	</script>
 </body>
 
