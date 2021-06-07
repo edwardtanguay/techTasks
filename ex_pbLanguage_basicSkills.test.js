@@ -1,4 +1,4 @@
-const { findCertainCities, isDivisible, getMissingAngle } = require('./ex_pbLanguage_basicSkills');
+const { findCertainCities, isDivisible, getMissingAngle, allAreEqual, atLeastTwoAreEqual } = require('./ex_pbLanguage_basicSkills');
 
 test('findCertainCities() is correctly implemented', () => {
     expect(findCertainCities('Berlin')).toBe('not found');
@@ -32,4 +32,26 @@ test('getMissingAngle() is correctly implemented', () => {
 	expect(getMissingAngle(160, 10)).toBe('acute');
 	expect(getMissingAngle(20, 10)).toBe('obtuse');
 	expect(getMissingAngle(45, 45)).toBe('right angle');
+});
+
+
+
+test('allAreEqual() is correctly implemented', () => {
+	expect(allAreEqual(1,1,1)).toBe(true);
+	expect(allAreEqual(1,1,2)).toBe(false);
+	expect(allAreEqual(1,2,3)).toBe(false);
+});
+
+test('atLeastTwoAreEqual() is correctly implemented', () => {
+	expect(atLeastTwoAreEqual(1,2,2)).toBe(true);
+	expect(atLeastTwoAreEqual(1,1,2)).toBe(true);
+	expect(atLeastTwoAreEqual(1,2,'2')).toBe(false);
+	expect(atLeastTwoAreEqual(1,2)).toBe(false);
+	expect(atLeastTwoAreEqual(1,1)).toBe(false);
+	expect(atLeastTwoAreEqual(1)).toBe(false);
+	expect(atLeastTwoAreEqual(1,1,1)).toBe(true);
+	expect(atLeastTwoAreEqual(2,99999999,2)).toBe(true);
+	expect(atLeastTwoAreEqual(2,-121212,2)).toBe(true);
+	expect(atLeastTwoAreEqual(1,2,3)).toBe(false);
+	expect(atLeastTwoAreEqual(3, undefined, undefined)).toBe(true);
 });

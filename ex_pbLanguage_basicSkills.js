@@ -38,4 +38,16 @@ function getMissingAngle(angle1, angle2) {
 	}
 }
 
-module.exports = { findCertainCities, isDivisible, getMissingAngle };
+function allAreEqual(a, b, c) {
+	return a === b && b === c;
+}
+
+function atLeastTwoAreEqual(a, b, c) {
+	console.log(arguments.length);
+	if (arguments.length !== 3) return false;
+	if (b === undefined && c === undefined) return false;
+	return a === b || b === c || c === a;
+}
+atLeastTwoAreEqual(3, undefined);
+
+module.exports = { findCertainCities, isDivisible, getMissingAngle, allAreEqual, atLeastTwoAreEqual };
